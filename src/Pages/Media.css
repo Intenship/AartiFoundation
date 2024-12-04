@@ -1,0 +1,182 @@
+/* General container styling */
+.media-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Section styling */
+.media-section {
+  margin-bottom: 40px;
+}
+
+.media-section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
+  color: #333;
+  background: linear-gradient(90deg, #d4fc79, #96e6a1);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Row styling for images in each section */
+.media-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap; /* Allows wrapping to new rows if needed */
+  justify-content: center;
+}
+
+/* Individual media item styling */
+.media-item {
+  flex: 0 0 calc(25% - 16px); /* 4 items per row (25% width, minus the gap) */
+  height: 200px; /* Fixed height for rectangular shape */
+  max-width: calc(25% - 16px);
+  border-radius: 8px; /* Optional: rounded corners */
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.media-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fits inside the rectangular area */
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.media-item:hover img {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Modal content styling */
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 10px 15px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.close:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+}
+
+/* Navigation buttons */
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .media-item {
+    flex: 0 0 calc(50% - 16px); /* 2 items per row for smaller screens */
+    height: 150px; /* Reduce height for better fit */
+  }
+
+  .media-section-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .media-item {
+    flex: 0 0 calc(100% - 16px); /* 1 item per row for very small screens */
+    height: 200px;
+  }
+
+  .media-section-title {
+    font-size: 1.2rem;
+  }
+
+  .modal-content {
+    width: 100%;
+    max-width: none;
+    margin: 0 10px;
+  }
+
+  .prev-button,
+  .next-button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+}
