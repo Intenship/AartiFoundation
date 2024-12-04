@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/AartiFoundation/static/css/main.427de502.css",
-    "main.js": "/AartiFoundation/static/js/main.678bf71b.js",
+    "main.js": "/AartiFoundation/static/js/main.08cac207.js",
     "static/js/453.e909d76a.chunk.js": "/AartiFoundation/static/js/453.e909d76a.chunk.js",
     "static/media/logo.svg": "/AartiFoundation/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/AartiFoundation/index.html",
     "main.427de502.css.map": "/AartiFoundation/static/css/main.427de502.css.map",
-    "main.678bf71b.js.map": "/AartiFoundation/static/js/main.678bf71b.js.map",
+    "main.08cac207.js.map": "/AartiFoundation/static/js/main.08cac207.js.map",
     "453.e909d76a.chunk.js.map": "/AartiFoundation/static/js/453.e909d76a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.427de502.css",
-    "static/js/main.678bf71b.js"
+    "static/js/main.08cac207.js"
   ]
 }
