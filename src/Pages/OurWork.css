@@ -65,3 +65,49 @@
     line-height: 1.6;
   }
   
+  /* General styling for the Donate Now button */
+.donate-button {
+  position: fixed;
+  bottom: 20px;
+  margin-bottom: 3cm;
+  right: 20px;
+  background-color: #00bcd4; /* Bright blue for the button */
+  color: white;
+  font-size: 18px;
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.donate-button:hover {
+  background-color: #0097a7; /* Darker blue on hover */
+  transform: translateY(-5px);
+}
+
+.donate-button:active {
+  background-color: #00838f; /* Even darker blue when clicked */
+  transform: translateY(2px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+  .donate-button {
+      bottom: 15px;
+      right: 15px;
+      font-size: 16px;
+      padding: 12px 25px;
+  }
+}
+
+/* Tablet and medium screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .donate-button {
+      bottom: 20px;
+      right: 20px;
+      font-size: 18px;
+      padding: 14px 28px;
+  }
+}

@@ -1,0 +1,183 @@
+/* Container Styles */
+.contact-container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Location Icon Styling */
+.location-icon {
+    color: #007BFF;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+
+/* Header section */
+.contact-header {
+    font-size: 2.8rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.contact-intro {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Contact details layout */
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact-info, .contact-social {
+    flex: 1 1 calc(50% - 20px);
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3, .contact-social h3 {
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+
+.contact-info p, .contact-info a {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Social icons */
+.contact-social p {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    font-size: 2.5rem;
+    color: #007BFF;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0056b3;
+    transform: scale(1.15);
+}
+
+.social-icons a[aria-label="YouTube"]:hover {
+    color: #FF0000; /* YouTube branding */
+}
+
+/* Google Map */
+.contact-map {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact-map h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-map iframe {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-details {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-social {
+        flex: 1 1 100%;
+    }
+
+    .contact-header {
+        font-size: 2.2rem;
+    }
+
+    .contact-intro {
+        font-size: 1.1rem;
+    }
+}
+
+/* General styling for the Donate Now button */
+.donate-button {
+    position: fixed;
+    bottom: 20px;
+    margin-bottom: 3cm;
+    right: 20px;
+    background-color: #00bcd4; /* Bright blue for the button */
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.donate-button:hover {
+    background-color: #0097a7; /* Darker blue on hover */
+    transform: translateY(-5px);
+}
+
+.donate-button:active {
+    background-color: #00838f; /* Even darker blue when clicked */
+    transform: translateY(2px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+    .donate-button {
+        bottom: 15px;
+        right: 15px;
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
+
+/* Tablet and medium screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .donate-button {
+        bottom: 20px;
+        right: 20px;
+        font-size: 18px;
+        padding: 14px 28px;
+    }
+}

@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const [selectedCertificate, setSelectedCertificate] = useState(null);
 
     const certificates = [
         {
-            src: "/images/certificate/1.png",
+            src: `${process.env.PUBLIC_URL}/images/certificate/1.png`, 
             alt: "Certificate 1",
             name: "Certificate of CSR",
         },
         {
-            src: "/images/certificate/3.png",
+            src: `${process.env.PUBLIC_URL}/images/certificate/3.png`, 
             alt: "Certificate 2",
-            name: "Certifcate of ATG",
+            name: "Certificate of 80G",
         },
         {
-            src: "/images/certificate/4.png",
+            src: `${process.env.PUBLIC_URL}/images/certificate/4.png`,
             alt: "Certificate 3",
-            name: "Certifcate of 12 ATG,"
+            name: "Certificate of 12 80G",
         },
     ];
 
@@ -35,21 +36,21 @@ const Home = () => {
                 {/* Carousel Items */}
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src="/images/home/1.jpeg" className="d-block w-100" alt="Supporting the Elderly" style={{ height: "10cm", objectFit: "cover" }} />
+                        <img src={`${process.env.PUBLIC_URL}/images/home/1.jpeg`} className="d-block w-100" alt="Supporting the Elderly" style={{ height: "10cm", objectFit: "cover" }} />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>Empowering Senior Citizens</h5>
                             <p>Join us in supporting the elderly with care, dignity, and companionship through our Old Age Foundation.</p>
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img src="/images/home/2.jpeg" className="d-block w-100" alt="Orphanage Foundation" style={{ height: "10cm", objectFit: "cover" }} />
+                        <img src={`${process.env.PUBLIC_URL}/images/home/2.jpeg`} className="d-block w-100" alt="Orphanage Foundation" style={{ height: "10cm", objectFit: "cover" }} />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>Hope for Orphaned Children</h5>
                             <p>Help provide shelter, education, and a brighter future for children in need through our Orphanage Foundation.</p>
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img src="/images/home/3.jpeg" className="d-block w-100" alt="Community Care Initiatives" style={{ height: "10cm", objectFit: "cover" }} />
+                        <img src={`${process.env.PUBLIC_URL}/images/home/3.jpeg`} className="d-block w-100" alt="Community Care Initiatives" style={{ height: "10cm", objectFit: "cover" }} />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>Building Stronger Communities</h5>
                             <p>Be a part of our mission to create a nurturing and caring environment for those who need it most.</p>
@@ -108,6 +109,12 @@ const Home = () => {
                     </div>
                 </div>
             )}
+
+            {/* Donate Now Button */}
+            <Link to="/donation">
+                <button className="donate-button">DONATE NOW</button>
+            </Link>
+
         </>
     );
 };

@@ -27,7 +27,8 @@ const Donation = () => {
         <CardMedia
           component="img"
           height="300"
-          image="/images/Gpay.jpeg"
+          image={`${process.env.PUBLIC_URL}/images/Gpay2.jpeg`}
+          // image="/images/Gpay.jpeg"
           alt="QR Code"
           sx={{
             borderRadius: "8px",

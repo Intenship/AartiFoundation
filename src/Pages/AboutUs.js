@@ -1,12 +1,13 @@
 import React from "react";
 import "./AboutUs.css";
-
+import { Link } from 'react-router-dom';
 const AboutUs = () => {
   return (
+    <>
     <div className="about-us-card">
       <div className="about-us-image-container">
         <img
-          src="/images/logo.jpeg"
+          src={`${process.env.PUBLIC_URL}/images/logo.jpeg`}
           alt="Aarti Niradhar Foundation"
           className="about-us-image"
         />
@@ -29,18 +30,15 @@ const AboutUs = () => {
           cover living, food, and care expenses. Your contributions help us 
           sustain and improve the quality of services we provide to those in need.
         </p>
-        <h2 className="about-us-contact-header">Contact Information</h2>
-        <p className="about-us-contact">
-          <strong>Address 1:</strong> At-post Phede, Pharshi, Near Cement Kamdhenu, 
-          Chiplun, Ratnagiri <br />
-          <strong>Address 2:</strong> At-post Malghar, Gurukul High School <br />
-          <strong>Email:</strong> 
-          <a href="mailto:info.ansfoundation@gmail.com"> info.ansfoundation@gmail.com</a> <br />
-          <strong>Phone:</strong> 
-          <a href="tel:+919373332947"> 7666686643, 9834583028, 9730012988 , 8779529843</a>
-        </p>
       </div>
     </div>
+
+           {/* Donate Now Button */}
+           <Link to="/donation">
+                <button className="donate-button">DONATE NOW</button>
+            </Link>
+    </>
+    
   );
 };
 

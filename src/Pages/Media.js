@@ -1,54 +1,83 @@
 import React, { useState } from "react";
 import "./Media.css";
-
+import { Link } from 'react-router-dom';
 const Media = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const imageCategories = {
     "Activity Section": [
-      "/images/Media/act/1.jpeg",
-      "/images/Media/act/2.jpeg",
-      "/images/Media/act/3.jpeg",
-      "/images/Media/act/4.jpeg",
-      "/images/Media/act/5.jpeg",
-      "/images/Media/act/6.jpeg",
+      // "/images/Media/act/1.jpeg",
+      // "/images/Media/act/2.jpeg",
+      // "/images/Media/act/3.jpeg",
+      // "/images/Media/act/4.jpeg",
+      // "/images/Media/act/5.jpeg",
+      // "/images/Media/act/6.jpeg",
+      `${process.env.PUBLIC_URL}/images/Media/act/1.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/act/2.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/act/3.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/act/4.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/act/5.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/act/6.jpeg`,
+
      
     ],
     "Health Check-up Section": [
-      "/images/Media/health/1.jpeg",
-      "/images/Media/health/4.jpeg",
-      "/images/Media/health/3.jpeg",
-  
-      "/images/Media/6.jpeg",
+`${process.env.PUBLIC_URL}/images/Media/health/1.jpeg`,
+    `${process.env.PUBLIC_URL}/images/Media/health/4.jpeg`,
+    `${process.env.PUBLIC_URL}/images/Media/health/3.jpeg`,
+`${process.env.PUBLIC_URL}/images/Media/6.jpeg`,
+      // "/images/Media/6.jpeg",
     ],
     Function: [
-      "/images/Media/func/1.jpeg",
-      "/images/Media/func/3.jpeg",
-      "/images/Media/func/10.jpeg",
-      "/images/Media/func/11.jpeg",
-      "/images/Media/func/12.jpeg",
-      "/images/Media/func/5.jpeg",
+      // "/images/Media/func/1.jpeg",
+      // "/images/Media/func/3.jpeg",
+      // "/images/Media/func/10.jpeg",
+      // "/images/Media/func/11.jpeg",
+      // "/images/Media/func/12.jpeg",
+      // "/images/Media/func/5.jpeg",
+      `${process.env.PUBLIC_URL}/images/Media/func/1.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/func/3.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/func/10.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/func/11.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/func/12.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/func/5.jpeg`,
     ],
     Physiotherapy: [
-      "/images/Media/2.jpeg",
-      "/images/Media/13.jpeg",
-      "/images/Media/14.jpeg",
-      "/images/Media/physo/1.jpeg",
-     
+      // "/images/Media/2.jpeg",
+      // "/images/Media/13.jpeg",
+      // "/images/Media/14.jpeg",
+      // "/images/Media/physo/1.jpeg",
+     `${process.env.PUBLIC_URL}/images/Media/2.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/13.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/14.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/physo/1.jpeg`,
+      
     ],
     Trip: [
-      "/images/Media/trip/1.jpeg",
-      "/images/Media/trip/2.jpeg",
-      "/images/Media/trip/3.jpeg",
+      // "/images/Media/trip/1.jpeg",
+      // "/images/Media/trip/2.jpeg",
+      // "/images/Media/trip/3.jpeg",
+
+      `${process.env.PUBLIC_URL}/images/Media/trip/1.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/trip/2.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/trip/3.jpeg`,
     ],
     Others: [
-      "/images/Media/other/17.jpeg",
-      "/images/Media/other/18.jpeg",
-      "/images/Media/other/20.jpeg",
-      "/images/Media/other/21.jpeg",
-      "/images/Media/other/22.jpeg",
-      "/images/Media/other/15.jpeg",
+      // "/images/Media/other/17.jpeg",
+      // "/images/Media/other/18.jpeg",
+      // "/images/Media/other/20.jpeg",
+      // "/images/Media/other/21.jpeg",
+      // "/images/Media/other/22.jpeg",
+      // "/images/Media/other/15.jpeg",
+
+      `${process.env.PUBLIC_URL}/images/Media/other/17.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/other/18.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/other/20.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/other/21.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/other/22.jpeg`,
+      `${process.env.PUBLIC_URL}/images/Media/other/15.jpeg`,
+    
     ],
   };
 
@@ -75,6 +104,7 @@ const Media = () => {
   };
 
   return (
+    <>
     <div className="media-container">
       {Object.entries(imageCategories).map(([category, images]) => (
         <div key={category} className="media-section">
@@ -114,6 +144,11 @@ const Media = () => {
         </div>
       )}
     </div>
+      {/* Donate Now Button */}
+      <Link to="/donation">
+                <button className="donate-button">DONATE NOW</button>
+            </Link>
+    </>
   );
 };
 
