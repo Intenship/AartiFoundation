@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/AartiFoundation/static/css/main.a826e0f8.css",
-    "main.js": "/AartiFoundation/static/js/main.e1ba62f1.js",
+    "main.css": "/AartiFoundation/static/css/main.1bfdc116.css",
+    "main.js": "/AartiFoundation/static/js/main.6eee0826.js",
     "static/js/453.e909d76a.chunk.js": "/AartiFoundation/static/js/453.e909d76a.chunk.js",
     "static/media/logo.svg": "/AartiFoundation/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/AartiFoundation/index.html",
-    "main.a826e0f8.css.map": "/AartiFoundation/static/css/main.a826e0f8.css.map",
-    "main.e1ba62f1.js.map": "/AartiFoundation/static/js/main.e1ba62f1.js.map",
+    "main.1bfdc116.css.map": "/AartiFoundation/static/css/main.1bfdc116.css.map",
+    "main.6eee0826.js.map": "/AartiFoundation/static/js/main.6eee0826.js.map",
     "453.e909d76a.chunk.js.map": "/AartiFoundation/static/js/453.e909d76a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a826e0f8.css",
-    "static/js/main.e1ba62f1.js"
+    "static/css/main.1bfdc116.css",
+    "static/js/main.6eee0826.js"
   ]
 }
